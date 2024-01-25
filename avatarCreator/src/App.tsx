@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { SERVER } from '../api/fetchAvatar'
+import ShowAvatar from '../modules/ShowAvatar'
 
 function App() {
   const [hash, setHash] = useState("random"); 
@@ -10,7 +10,9 @@ function App() {
     <div>
       this is a random avatar
     </div>
-    <img src={SERVER + hash} alt="random Avatar" />
+    {<ShowAvatar
+      generator = {hash}
+    />}
     </>
   )
 }
