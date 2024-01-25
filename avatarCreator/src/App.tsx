@@ -19,13 +19,17 @@ function App() {
     <div>
       Generate images from any text like this!
     </div>
-    {<ShowAvatar
-      generator = {hash}
-    />}
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="text" />
-      <button type="submit" >Let's go!</button>
-    </form>
+    <div>
+      {<ShowAvatar
+        generator = {hash}
+      />}
+    </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="text" />
+        <button type="submit" >Let's go!</button>
+      </form>
+    </div>
     </>
   )
 }
