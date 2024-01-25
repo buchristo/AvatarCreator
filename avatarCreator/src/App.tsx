@@ -2,8 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import ShowAvatar from '../modules/ShowAvatar'
 
+const randomGenerator = Math.random().toString(36).substring(2,7);
+
 function App() {
-  const [hash, setHash] = useState("random"); 
+  const [hash, setHash] = useState(randomGenerator); 
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>){
     e.preventDefault();
