@@ -15,14 +15,19 @@ function App() {
     setHash(newTextValue);
   }
 
+  function handleAvatarTypeChange(e: React.ChangeEvent<HTMLInputElement>){
+    setAvatarType(e.target.value);
+  }
+
   return (
     <>
     <div>
       Generate images from any text like this!
-    </div>
+    </div>  
     <div>
       {<ShowAvatar
         generator = {hash}
+        avatarType = {avatarType}
       />}
     </div>
     <div>
@@ -39,9 +44,9 @@ function App() {
             <input
               type="radio"
               name="avatarOption"
-              value="Robot"
-              checked={true}
+              value=""
               className="avatar-check-input"
+              onChange={handleAvatarTypeChange}
             />
             Robot
           </label>
@@ -52,8 +57,9 @@ function App() {
             <input
               type="radio"
               name="avatarOption"
-              value="Monster"
+              value="?set=set2"
               className="avatar-check-input"
+              onChange={handleAvatarTypeChange}
             />
             Monster
           </label>
@@ -64,8 +70,9 @@ function App() {
             <input
               type="radio"
               name="avatarOption"
-              value="Robot_Head"
+              value="?set=set3"
               className="avatar-check-input"
+              onChange={handleAvatarTypeChange}
             />
             Robothead
           </label>
@@ -76,8 +83,9 @@ function App() {
             <input
               type="radio"
               name="avatarOption"
-              value="Cat"
+              value="?set=set4"
               className="avatar-check-input"
+              onChange={handleAvatarTypeChange}
             />
             Cat
           </label>
